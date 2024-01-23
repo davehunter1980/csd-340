@@ -1,0 +1,35 @@
+/* 
+ * Dave Hunter
+ * Module 4.2
+ * January 23, 2024
+ */
+#image-gallery {
+    margin-top: 10%;
+}
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+}
+.child1, .child2, .child3 {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(128,0,128,255);
+}
+h1, h3 {
+    color: rgba(0,255,255,255);
+    text-align: center;    
+}
+figure {
+    text-align: center;
+}
+figcaption {
+    color: rgba(255,0,0,255);
+    font-size: .75em;
+    font-style: italic;
+    text-align: center;
+}
+a:link {
+    float: right;
+}
