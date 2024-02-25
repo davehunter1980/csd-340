@@ -29,18 +29,21 @@
 </head>
     
 <body>
-    <div id="container" onmousedown="this.style.color='red';" onmouseup= "this.style.color='black';">
+    <div id="container" onclick="if(this.style.color=='green') {this.style.color='black';}else{this.style.color='green';}">
         <h1>Assignment 9.3: JavaScript - Part 2</h1>
 
         <a href="../index.html">Return Home</a>
         
         <hr>
         
-       <a href=# onmousedown="cave.src='images/cave_01.jpg';" onmouseup= "cave.src='images/cave_02.jpg';">
+        Click Anywhere to change text style.
+        <br>
+        
+        <a href=# onmousedown="cave.src='images/cave_01.jpg';" onmouseup= "cave.src='images/cave_02.jpg';">
             <img id="cave" src="images/cave_02.jpg">
         </a>
         <br>
-        Hold Spacebar to change image.
+        Hold mouse button down over image to change.
         
         <br>
         <br>
