@@ -1,0 +1,59 @@
+<!-- Dave Hunter : Assignment 10.3 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <meta name="description" content="Assignment Module 10.3">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="keywords" content="assignment, css, html, web development">
+    <meta http-equiv="refresh" content="60">
+    <link rel="stylesheet" type="text/css" href="hunter_Mod10_3.css">
+    
+    <script>
+        function displayImage(imageFile){
+            var largerImage = document.getElementById("mainImage");
+            var newNode = document.createElement("img");
+            newNode.id = "mainImage";
+            newNode.src = imageFile;
+            newNode.alt = "Large Image";
+            newNode.className = "mainImage";
+            newNode.style.width = "300px";
+            newNode.style.height = "200px";
+            largerImage.parentNode.replaceChild(newNode, largerImage);
+        }
+        
+        function changeCave() {
+            var caveImage=document.getElementById()
+        }
+    </script>
+</head>
+    
+<body>
+    <div id="container" onmousedown="this.style.color='red';" onmouseup= "this.style.color='black';">
+        <h1>Assignment 9.3: JavaScript - Part 2</h1>
+
+        <a href="../index.html">Return Home</a>
+        
+        <hr>
+        
+       <a href=# onmousedown="cave.src='images/cave_01.jpg';" onmouseup= "cave.src='images/cave_02.jpg';">
+            <img id="cave" src="images/cave_02.jpg">
+        </a>
+        <br>
+        Hold Spacebar to change image.
+        
+        <br>
+        <br>
+        
+        <a href=# onmousedown="moon.src='images/moon_01.jpg';" onmouseup= "moon.src='images/moon_02.jpg';">
+            <img id="moon" src="images/moon_02.jpg">
+        </a>
+        <br>
+        Hold mouse button down over image to change.
+        
+        Click on any text to change style.
+        
+    </div>
+</body>
+
+</html>
