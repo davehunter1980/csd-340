@@ -12,31 +12,37 @@
         const entry = [];
         
         function Add() {
+            // Verify text has been entered and stop if not.
             if(document.getElementById('entries').value == "" || document.getElementById('entries').value == null) {
                 alert("Plese enter text into the textbox before clicking Add");
                 return;
             }
+            // Add element to the array and display confirmation message.
             entry.push(document.getElementById('entries').value);
             document.getElementById('entries').value= "";
             alert("Item: '" + entry[entry.length-1] + "' added at index " + (entry.length-1));
         }
         
         function Delete() {
+            // Verify array is not empty
             if (entry.length == 0) {
                 alert("There are no entries to delete.")
                 return;
             }
+            // Remove the last entry and display confirmation message.
             entry.pop();
             alert("Last entry deleted");
         }
         
         function Display() {
+            // Check to see if there are enties to display
             if(entry.length == 0)
             {
+                // Set output tell the user the list is empty
                 document.getElementById('show').innerHTML = "There are no entries to display.";
-                // alert("There are no entries to display.");
                 return;
             }
+            // Clear output and add each entry to the list.
             var output = "";
             for(let i=0; i<entry.length; i++) {
                 output += "<li>" + entry[i] + "</li>";                
