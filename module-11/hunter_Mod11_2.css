@@ -8,3 +8,7 @@ button {
     border-style: groove;
     width: 378px;
 }
+#displayarea {
+    font-size: 20px;
+    text-emphasis: bold;
+}
