@@ -1,0 +1,10 @@
+/* Dave Hunter : Assignment 11.2 */
+
+button {
+    width: 125px;
+    background-color: paleturquoise;
+}
+#entries {
+    border-style: groove;
+    width: 378px;
+}

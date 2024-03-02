@@ -1,0 +1,68 @@
+<!-- Dave Hunter : Assignment 11.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <meta name="description" content="Assignment Module 10.3">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="keywords" content="assignment, css, html, web development">
+    <link rel="stylesheet" type="text/css" href="hunter_Mod11_2.css">
+    
+    <script type="text/javascript">
+        const entry = [];
+        
+        function Add() {
+            if(document.getElementById('entries').value == "" || document.getElementById('entries').value == null) {
+                alert("Plese enter text into the textbox before clicking \"Add\"");
+                return;
+            }
+            entry.push(document.getElementById('entries').value);
+            document.getElementById('entries').value= "";
+            alert("Item: '" + entry[entry.length-1] + "' added at index " + (entry.length-1));
+        }
+        
+        function Delete() {
+            if (entry.length == 0) {
+                alert("There are no entries to delete.")
+                return;
+            }
+            entry.pop();
+            alert("Last entry deleted");
+        }
+        
+        function Display() {
+            if(entry.length == 0)
+            {
+                document.getElementById('show').innerHTML = "There are no entries to display.";
+                // alert("There are no entries to display.");
+                return;
+            }
+            var output = "";
+            for(let i=0; i<entry.length; i++) {
+                output += "<li>" + entry[i] + "</li>";                
+            }
+            document.getElementById('show').innerHTML = output;
+        }
+            
+    </script>
+</head>
+    
+<body>
+    <div>
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        <p>This is an interactive To Do List. </p>
+        <p>Type your first item in the text box, then click Add.</p> 
+        <p>Click the Display button to see current items in the list.</p> 
+        <p>Click on Delete Last Entry if you'd like to remove the last entry.</p>
+        <input type="text" id="entries" />
+        <br>
+        <button name="add" onclick="Add()">Add</button>
+        <button name="delete" onclick="Delete()">Delete Last Entry</button>
+        <button name="display" onclick="Display()">Display</button>
+    </div>
+    <div id="displayarea">
+        <ol id="show"></ol>
+    </div>
+</body>
+
+</html>
