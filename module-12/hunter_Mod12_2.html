@@ -3,17 +3,10 @@
 <html lang="en">
 <head>
     <title>CSD 340 Development with HTML and CSS</title>
-    <meta name="description" content="Assignment Module 10.3">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <meta name="keywords" content="assignment, css, html, web development">
     <link rel="stylesheet" type="text/css" href="hunter_Mod12_2.css">
     
     <script type="text/javascript">
-        const movies = [ "1. The Goonies", "2. Halloween", "3. Die Hard", "4. The Monster Squad", "5. Ferris Bueller's Day Off", "6. The Empire Strikes Back (Before the Special Editions)", "7. A Nightmare on Elm Street Part 3: Dream Warriors", "8. Gremlins", "9. Trick or Treat", "10. Monty Python and the Holy Grail" ];
-        
-        function OnLoad() {
-            TopToBottom();
-        } 
+        const movies = [ "1. <i>To Kill a Mockingbird</i> by Harper Lee", "2. <i>Percy Jackson and the Olympians: The Titan's Curse</i> by Rick Riordan", "3. <i>Harry Potter and the Goblet of Fire</i> by J.K. Rowling", "4. <i>The Call of the Wild</i> by Jack London", "5. <i>The Hobbit</i> by J.R.R. Tolkien", "6. <i>Lord of the Rings: Return of the King</i> by J.R.R. Tolkien", "7. <i>The Adventures of Tom Sawyer</i> by Mark Twain", "8. <i>It</i> by Stephen King", "9. <i>Star Wars: The Old Republic: Revan</i> by Drew Karpyshyn", "10. <i>Star Wars: Darth Plagueis</i> by James Luceno" ];
         
         function TopToBottom() {
             var output = "";
@@ -31,20 +24,40 @@
     </script>
 </head>
     
-<body onload="OnLoad()">
-    
-    <h1>Assignment 12.2: JavaScript - Part 4</h1>
-    <h2>Movies List</h2>
-    
-    <div class="main">
-        
-        <div id="display">
-            <p id="list"></p>
-        </div>
-        
-        <div class="buttons">
-            <button onclick="TopToBottom()">Top to Bottom</button>
-            <button onclick="BottomToTop()">Bottom to Top</button>
+<body>
+    <div id="container">
+        <h1>Assignment 3.3: Build a Web Page Exercise - Part 3</h1>
+
+            <div id="leftDiv">
+                <h3>Top 10 Favorite Books</h3>
+                <ol id="list">
+                    <li><i>To Kill a Mockingbird</i> by Harper Lee</li>
+                    <li><i>Percy Jackson and the Olympians: The Titan's Curse</i> by Rick Riordan</li>
+                    <li><i>Harry Potter and the Goblet of Fire</i> by J.K. Rowling</li>
+                    <li><i>The Call of the Wild</i> by Jack London</li>
+                    <li><i>The Hobbit</i> by J.R.R. Tolkien</li>
+                    <li><i>Lord of the Rings: Return of the King</i> by J.R.R. Tolkien</li>
+                    <li><i>The Adventures of Tom Sawyer</i> by Mark Twain</li>
+                    <li><i>It</i> by Stephen King</li>
+                    <li><i>Star Wars: The Old Republic: Revan</i> by Drew Karpyshyn</li>
+                    <li><i>Star Wars: Darth Plagueis</i> by James Luceno</li>
+                </ol>
+                <button onclick="TopToBottom()">Top to Bottom</button>
+                <button onclick="BottomToTop()">Bottom to Top</button>
+            </div>
+
+            <div id="rightDiv">
+                <h3>5 Things I've Learned Since the Course Started</h3>
+                <ul>
+                    <li>Text that is difficult to read will be easier to remember.</li>
+                    <li>Limit the amount of text in a Powerpoint presentation to keep listeners from focusing on the presentation and not the presenter.</li>
+                    <li>The less certain a person is, the harder the person will argue.</li>
+                    <li>How to modify html tags using CSS.</li>
+                    <li>The &lt;div&gt; tag.</li>
+                </ul>
+            </div>
+        <div id="lastDiv">
+            <a href="../index.html">Return to Landing Page</a>
         </div>
     </div>
 </body>
