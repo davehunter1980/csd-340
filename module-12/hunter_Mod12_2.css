@@ -1,0 +1,30 @@
+/* Dave Hunter : Assignment 11.2 */
+
+body {
+    background-color: lightblue;
+}
+button {
+    background-color: darkgreen;
+    border-color: lightgreen;
+    color: lightgray;
+}
+h1 {
+    color: mediumseagreen;
+    text-align: center;
+}
+h2 {
+    color: mediumseagreen;
+    text-align: center;
+}
+.buttons {
+    text-align: center;
+}
+.main {
+    font-size: 20px;
+    text-emphasis: bold;
+}
+#list {
+    color: mediumseagreen;
+    text-align: center;
+    font-weight: bold;
+}

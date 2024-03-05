@@ -1,0 +1,52 @@
+<!-- Dave Hunter : Assignment 12.2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <meta name="description" content="Assignment Module 10.3">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="keywords" content="assignment, css, html, web development">
+    <link rel="stylesheet" type="text/css" href="hunter_Mod12_2.css">
+    
+    <script type="text/javascript">
+        const movies = [ "1. The Goonies", "2. Halloween", "3. Die Hard", "4. The Monster Squad", "5. Ferris Bueller's Day Off", "6. The Empire Strikes Back (Before the Special Editions)", "7. A Nightmare on Elm Street Part 3: Dream Warriors", "8. Gremlins", "9. Trick or Treat", "10. Monty Python and the Holy Grail" ];
+        
+        function OnLoad() {
+            TopToBottom();
+        } 
+        
+        function TopToBottom() {
+            var output = "";
+            for(let i=0; i<movies.length; i++) 
+                output += movies[i] + "<br>";
+            document.getElementById("list").innerHTML = output;                
+        } 
+        
+        function BottomToTop() {
+            var output = "";
+            for(let i=movies.length-1; i >= 0; i--) 
+                output += movies[i] + "<br>";
+            document.getElementById("list").innerHTML = output;                
+        } 
+    </script>
+</head>
+    
+<body onload="OnLoad()">
+    
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+    <h2>Movies List</h2>
+    
+    <div class="main">
+        
+        <div id="display">
+            <p id="list"></p>
+        </div>
+        
+        <div class="buttons">
+            <button onclick="TopToBottom()">Top to Bottom</button>
+            <button onclick="BottomToTop()">Bottom to Top</button>
+        </div>
+    </div>
+</body>
+
+</html>
